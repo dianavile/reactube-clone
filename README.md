@@ -1,3 +1,22 @@
+# reactube-clone
+
+## Commits
+![reactube](./src/assets/reactube-clone.png)
+
+## Commit1: `«initialCommit»`
+- Installation: ```npx install create-react-app```
+- Dependencies: ```yarn add axios @material-ui/core @material-ui/icons react-bootstrap bootstrap```
+- Update README.md
+## Commit2: `«appComponent»`
+- Create App component
+## Commit3: `«searchBarComponent»`
+- Create SearchBar component
+## Commit4: `«videoListomponent»`
+- Create VideoList component
+## Commit5: `«videoItemComponent»`
+- Create VideoItem component
+## Commit6:  `«videoDetailComponent»`
+- Create VideoDetail component 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
