@@ -1,15 +1,15 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
-import logo from './logo.svg';
 import './App.css';
 import youtube from '../src/api/youtube';
-// import { SearchBar, VideoList, VideoDetail } from "./components";
+import { SearchBar } from "./components";
+// import { VideoList, VideoDetail } from "./components";
 
 class App extends React.Component {
-   state = {
-    videos: [],
-    selectedVideo:null,
-  }
+  //  state = {
+  //   videos: [],
+  //   selectedVideo:null,
+  // }
 
   // componentDidMount() { 
   //   this.handleSubmit('react') 
@@ -24,37 +24,32 @@ class App extends React.Component {
       params: {
         part: "snippet",
         maxResults: 5,
-        key: "AIzaSyCn0H63y8Z28n7g-NkLhVrDpLGoDuQs6VM",
+        key: 'AIzaSyAqJu_MgUyIUyBHFEFoUNZmw3oeoiHywrE', 
         q: searchTerm,
       }
     });
     console.log(response.data.items);
     // this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] })
   }
-
   render() { 
-    //  const {selectedVideo, videos} = this.state;
+    // const {selectedVideo, videos} = this.state;
     return (
-      <Grid 
-        container
-        className="App-header"
-        justify="center"
-        alignItems="center">
+      <Grid container className="App-header">
         <Grid item xs={12}>
           <Grid container spacing={10}>
             <Grid item xs={12}>
-              <div>
-                <header className="App-header">
-                  <img src={logo} className="App-logo" alt="logo" />
-                  <div className="App-searchbar">SEARCHBAR</div>
-                </header>  
-              </div>
+              <SearchBar onFormSubmit={this.handleSubmit}/>
             </Grid>
             <Grid item xs={8}>
               <div className="App-videodetail">VIDEODETAIL</div> 
             </Grid>
             <Grid item xs={4}>
-            <div className="App-videoitems">VIDEOLIST</div> 
+              <div className="App-videoitems">VIDEOLIST</div>
+              <Grid item xs={12} className="videoItem">VideoItem1</Grid>
+              <Grid item xs={12} className="videoItem">VideoItem2</Grid>
+              <Grid item xs={12} className="videoItem">VideoItem3</Grid>
+              <Grid item xs={12} className="videoItem">VideoItem4</Grid>
+              <Grid item xs={12} className="videoItem">VideoItem5</Grid>
             </Grid>
           </Grid>
         </Grid>

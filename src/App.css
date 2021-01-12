@@ -1,27 +1,32 @@
 .App {
   color: white;
+  margin: 5px; 
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px;
 }
 
 .App-logo {
   height:5vmin;
   pointer-events: none;
-  flex: 0.3;
+  flex: 0.2;
 }
 
 .App-header {
-  /* background-color: #161523; */
-  /* min-height: 20vh; */
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: black;
 }
 .App-searchbar{
   color:black;
   background-color:white;
-  flex: 0.7;
+  flex: 0.8;
 }
 
 .App-videodetail{

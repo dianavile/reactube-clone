@@ -9,8 +9,12 @@
 - Update README.md
 ## Commit2: `«appComponent»`
 - Create App component
+- Add "empty" SearchBar, VideoList and VideoDetail components
 ## Commit3: `«searchBarComponent»`
 - Create SearchBar component
+- Add Logo, Searchbar, Icons
+- Add YouTube V3 Api
+- Style SearchBar component.
 ## Commit4: `«videoListomponent»`
 - Create VideoList component
 ## Commit5: `«videoItemComponent»`
