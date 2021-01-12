@@ -2,9 +2,22 @@
 .AppBar{
     color: white;
     width: 100%;
-    padding: 5px;
-} 
+    padding: 2px;
+}
 
 .text{ 
     color: grey;
+}
+
+.searchbar__right{
+    display: flex;
+    align-items: center;
+}
+
+.searchbar__icon {
+    margin-left: 10px;
+}
+
+.searchbar__center > input {
+    flex: 1;
 }

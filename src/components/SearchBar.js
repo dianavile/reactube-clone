@@ -1,6 +1,9 @@
 import React from 'react';
+import MenuIcon from '@material-ui/icons/Menu';
+// import Avatar from '@material-ui/core/Avatar';
 import { Paper, AppBar, Toolbar } from "@material-ui/core";
 import logo from '../logo.svg';
+
 
 class SearchBar extends React.Component { 
     state = {
@@ -20,8 +23,11 @@ class SearchBar extends React.Component {
         return (
             <AppBar className="AppBar" position="fixed">
                 <Toolbar className="searchbar">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <Paper elevation={10} style={{ padding: "5px" }}>
+                    <div className="searchbar__left">
+                        <MenuIcon />
+                        <img src={logo} className="logo" alt="logo" />    
+                     </div>
+                    <Paper elevation={12} style={{ padding: "5px" }}>
                     <form onSubmit={this.handleSubmit}>
                         <i className="material-icons">
                             <label>
@@ -29,7 +35,15 @@ class SearchBar extends React.Component {
                             </label>
                         </i>
                     </form>
-                    </Paper>    
+                    </Paper>
+                    {/* <div className="searchbar__right">
+                        <Avatar
+                            alt='Diana Vilé'
+                            src="https://avatars2.githubusercontent.com/u/25930085?s=60&amp;v=4"
+                            width="12px"
+                            height="12px"
+                        />
+                    </div> */}
                 </Toolbar>
             </AppBar>                  
             )

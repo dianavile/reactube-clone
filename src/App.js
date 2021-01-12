@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 import { Grid } from "@material-ui/core";
 import './App.css';
 import youtube from '../src/api/youtube';
-import { SearchBar } from "./components";
-// import { VideoList, VideoDetail } from "./components";
+import { SearchBar, VideoList } from "./components";
+// import { VideoDetail } from "./components";
 
 class App extends React.Component {
-  //  state = {
-  //   videos: [],
-  //   selectedVideo:null,
-  // }
+   state = {
+    videos: [],
+    // selectedVideo:null,
+  }
 
   // componentDidMount() { 
   //   this.handleSubmit('react') 
@@ -29,10 +29,11 @@ class App extends React.Component {
       }
     });
     console.log(response.data.items);
-    // this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] })
+    this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] })
   }
   render() { 
-    // const {selectedVideo, videos} = this.state;
+    // eslint-disable-next-line
+    const {selectedVideo, videos} = this.state;
     return (
       <Grid container className="App-header">
         <Grid item xs={12}>
@@ -44,12 +45,7 @@ class App extends React.Component {
               <div className="App-videodetail">VIDEODETAIL</div> 
             </Grid>
             <Grid item xs={4}>
-              <div className="App-videoitems">VIDEOLIST</div>
-              <Grid item xs={12} className="videoItem">VideoItem1</Grid>
-              <Grid item xs={12} className="videoItem">VideoItem2</Grid>
-              <Grid item xs={12} className="videoItem">VideoItem3</Grid>
-              <Grid item xs={12} className="videoItem">VideoItem4</Grid>
-              <Grid item xs={12} className="videoItem">VideoItem5</Grid>
+              <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
             </Grid>
           </Grid>
         </Grid>
