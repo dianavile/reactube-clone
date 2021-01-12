@@ -3,11 +3,11 @@ import { Grid, Paper, Typography } from "@material-ui/core";
 
 const VideoItem = ({video, onVideoSelect }) => { 
     return (
-        <Grid item xs={12}>
+        <Grid item md={8} style={{ padding: "5px" }}>
             <Paper style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => onVideoSelect(video)} >
-                <img style={{ marginRight: "15px" }} alt="thumbnail" src={video.snippet.thumbnails.medium.url} />
+                <img style={{ marginRight: "10%" }} alt="thumbnail" src={video.snippet.thumbnails.medium.url} />
                 <Typography variant="subtitle1">
-                    <b>{video.snippet.title}</b>
+                    <b style={{ marginRight: "10px" }}>{video.snippet.title}</b>
                 </Typography>
             </Paper>
         </Grid>

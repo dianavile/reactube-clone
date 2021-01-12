@@ -2,18 +2,17 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import './App.css';
 import youtube from '../src/api/youtube';
-import { SearchBar, VideoList } from "./components";
-// import { VideoDetail } from "./components";
+import { SearchBar, VideoList, VideoDetail } from "./components";
 
 class App extends React.Component {
    state = {
     videos: [],
-    // selectedVideo:null,
+    selectedVideo:null,
   }
 
-  // componentDidMount() { 
-  //   this.handleSubmit('react') 
-  // }
+  componentDidMount() { 
+    this.handleSubmit('html5') 
+  }
 
   onVideoSelect  = (video) => {
     this.setState({ selectedVideo: video });
@@ -28,11 +27,10 @@ class App extends React.Component {
         q: searchTerm,
       }
     });
-    console.log(response.data.items);
+    // console.log(response.data.items);
     this.setState({ videos: response.data.items, selectedVideo: response.data.items[0] })
   }
   render() { 
-    // eslint-disable-next-line
     const {selectedVideo, videos} = this.state;
     return (
       <Grid container className="App-header">
@@ -42,7 +40,7 @@ class App extends React.Component {
               <SearchBar onFormSubmit={this.handleSubmit}/>
             </Grid>
             <Grid item xs={8}>
-              <div className="App-videodetail">VIDEODETAIL</div> 
+              <VideoDetail video={selectedVideo} />
             </Grid>
             <Grid item xs={4}>
               <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>

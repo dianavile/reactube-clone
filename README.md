@@ -21,6 +21,13 @@
 - Create VideoItem component
 ## Commit6:  `«videoDetailComponent»`
 - Create VideoDetail component 
+
+## TODO:
+- DEBUG ERROR:
+`Warning: Each child in a list should have a unique "key" prop.
+Check the render method of `VideoList`. 
+See https://reactjs.org/link/warning-keys for more information.`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
