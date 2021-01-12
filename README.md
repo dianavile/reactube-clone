@@ -1,7 +1,8 @@
 # reactube-clone
 
-## Commits
+## Proyect
 ![reactube](./src/assets/reactube-clone.png)
+[DEMO](https://reactube-clone.netlify.app/)
 
 ## Commit1: `«initialCommit»`
 - Installation: ```npx install create-react-app```
