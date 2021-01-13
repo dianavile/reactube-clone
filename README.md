@@ -16,7 +16,7 @@
 - Add Logo, Searchbar, Icons
 - Add YouTube V3 Api
 - Style SearchBar component.
-## Commit4: `«videoListomponent»`
+## Commit4: `«videoListComponent»`
 - Create VideoList component
 ## Commit5: `«videoItemComponent»`
 - Create VideoItem component
